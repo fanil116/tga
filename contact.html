@@ -64,7 +64,7 @@
 
 <body>
     <main>
-        <!-- <button onclick="backEvents();">Launch Popup</button> -->
+        <button onclick="backEvents();">Back</button>
         <div align="center">
             <a href="https://ton.org/"><img width="48" src="./assets/tapps.png" alt="logo of telegram web apps"></a>
         </div>
@@ -109,13 +109,10 @@
         Telegram.WebApp.MainButton.onClick(function () {
             Telegram.WebApp.showAlert('Main Button was clicked')
         });	
+        
         console.log(Telegram.WebApp);
-
-        Telegram.WebApp.BackButton.show();
-        // Show back button
-
         Telegram.WebApp.BackButton.onClick(function () {
-            Telegram.WebApp.showAlert('Back Button was clicked')
+            Telegram.WebApp.close();
         });	
 
         Telegram.WebApp.MainButton.show();
@@ -145,7 +142,7 @@
         };
 
         function backEvents() {
-
+            navigate(-1);
         }
 
         function setViewportData() {
